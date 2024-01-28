@@ -1,2 +1,9 @@
-# lineage_device_samsung_a12s
-LineageOS compatible device tree for a12s.
+# Android device tree for samsung SM-A127F (a12s)
+
+```
+#
+# Copyright (C) 2024 The LineageOS Project
+#
+# SPDX-License-Identifier: Apache-2.0
+#
+```

@@ -5,6 +5,7 @@
 #
 
 DEVICE_PATH := device/samsung/a12s
+BUILD_BROKEN_DUP_RULES := true
 
 # Architecture
 TARGET_ARCH := arm64

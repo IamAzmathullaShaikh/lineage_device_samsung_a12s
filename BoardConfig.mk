@@ -52,7 +52,7 @@ TARGET_KERNEL_SOURCE := kernel/samsung/a12s
 ## Kernel
 BOARD_KERNEL_IMAGE_NAME := Image
 TARGET_KERNEL_ARCH := arm64
-TARGET_KERNEL_SOURCE := kernel/samsung/exynos850
+TARGET_KERNEL_SOURCE := kernel/samsung/a12s
 TARGET_KERNEL_CLANG_COMPILE := true
 
 ## DTBO

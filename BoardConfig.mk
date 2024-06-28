@@ -7,7 +7,7 @@
 DEVICE_PATH := device/samsung/a12s
 BUILD_BROKEN_DUP_RULES := true
 BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
-
+ALLOW_MISSING_DEPENDENCIES=true
 
 # Architecture
 TARGET_ARCH := arm64
@@ -94,9 +94,6 @@ TARGET_USERIMAGES_USE_F2FS := true
 
 # Security patch level
 VENDOR_SECURITY_PATCH := 2021-08-01
-
-## Keymaster
-TARGET_KEYMASTER_VARIANT := samsung
 
 # Verified Boot
 BOARD_AVB_ENABLE := true

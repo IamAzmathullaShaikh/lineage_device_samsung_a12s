@@ -30,10 +30,6 @@ DEXPREOPT_GENERATE_APEX_IMAGE := true
 # system/core and build/make
 AB_OTA_UPDATER := false
 
-# Bootloader
-TARGET_BOOTLOADER_BOARD_NAME := exynos850
-TARGET_NO_BOOTLOADER := true
-
 # Display
 TARGET_SCREEN_DENSITY := 300
 
@@ -74,8 +70,11 @@ BOARD_SAMSUNG_DYNAMIC_PARTITIONS_SIZE := 9122611200 # TODO: Fix hardcoded value
 BOARD_USES_METADATA_PARTITION := true
 BOARD_ROOT_EXTRA_FOLDERS := efs
 
-# Platform
+## Platform
+BOARD_VENDOR := samsung
 TARGET_BOARD_PLATFORM := universal3830
+TARGET_BOOTLOADER_BOARD_NAME := exynos850
+TARGET_SOC := exynos3830
 
 # Properties
 TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop

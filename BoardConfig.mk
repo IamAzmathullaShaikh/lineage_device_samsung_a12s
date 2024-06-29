@@ -128,7 +128,7 @@ DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/manifest.xml
 ENABLE_VENDOR_RIL_SERVICE := true
 
 ## SELinux
-BOARD_SEPOLICY_TEE_FLAVOR := teegris
+#BOARD_SEPOLICY_TEE_FLAVOR := teegris
 include device/lineage/sepolicy/exynos/sepolicy.mk
 include device/samsung_slsi/sepolicy/sepolicy.mk
 

@@ -58,6 +58,7 @@ BOARD_MKBOOTIMG_ARGS += --tags_offset $(BOARD_KERNEL_TAGS_OFFSET)
 BOARD_INCLUDE_DTB_IN_BOOTIMG := true
 BOARD_KERNEL_SEPARATED_DTBO:= true
 
+#KERNEL_DEFCONFIG := exynos850-a12snsxx_defconfig
 TARGET_KERNEL_CONFIG := exynos850-a12snsxx_defconfig
 TARGET_KERNEL_SOURCE := kernel/samsung/a12s
 TARGET_KERNEL_HEADER_ARCH := arm64
@@ -128,9 +129,10 @@ DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/manifest.xml
 ENABLE_VENDOR_RIL_SERVICE := true
 
 ## SELinux
-#BOARD_SEPOLICY_TEE_FLAVOR := teegris
+BOARD_SEPOLICY_TEE_FLAVOR := teegris
 #include device/lineage/sepolicy/exynos/sepolicy.mk
 #include device/samsung_slsi/sepolicy/sepolicy.mk
 
 # Inherit the proprietary files
 include vendor/samsung/a12s/BoardConfigVendor.mk
+include kernel/samsung/a12s/AndroidKernel.mk

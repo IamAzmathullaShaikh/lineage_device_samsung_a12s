@@ -42,14 +42,18 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += \
     fstab.ramplus \
+    recovery.fstab \
+    fstab.exynos850 \
     init.recovery.exynos850.rc \
     init.recovery.samsung.rc \
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/etc/fstab.ramplus:$(TARGET_COPY_OUT_RAMDISK)/fstab.ramplus
+    $(LOCAL_PATH)/rootdir/etc/recovery.fstab:$(TARGET_COPY_OUT_RAMDISK)/recovery.fstab
+    $(LOCAL_PATH)/rootdir/etc/fstab.exynos850:$(TARGET_COPY_OUT_RAMDISK)/fstab.exynos850
 
 # Shipping API level
-PRODUCT_SHIPPING_API_LEVEL := 30
+PRODUCT_SHIPPING_API_LEVEL := 34
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \

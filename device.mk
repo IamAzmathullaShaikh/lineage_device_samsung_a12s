@@ -47,10 +47,6 @@ PRODUCT_PACKAGES += \
     init.recovery.exynos850.rc \
     init.recovery.samsung.rc \
 
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/rootdir/etc/fstab.ramplus:$(TARGET_COPY_OUT_RAMDISK)/fstab.ramplus
-    $(LOCAL_PATH)/rootdir/etc/fstab.exynos850:$(TARGET_COPY_OUT_RAMDISK)/fstab.exynos850
-
 # Shipping API level
 PRODUCT_SHIPPING_API_LEVEL := 33
 

@@ -58,8 +58,8 @@ BOARD_MKBOOTIMG_ARGS += --tags_offset $(BOARD_KERNEL_TAGS_OFFSET)
 BOARD_INCLUDE_DTB_IN_BOOTIMG := true
 BOARD_KERNEL_SEPARATED_DTBO:= true
 
-#KERNEL_DEFCONFIG := exynos850-a12snsxx_defconfig
-TARGET_KERNEL_CONFIG := exynos850-a12snsxx_defconfig
+KERNEL_DEFCONFIG := a12s_defconfig
+TARGET_KERNEL_CONFIG := a12s_defconfig
 TARGET_KERNEL_CLANG_COMPILE := true
 TARGET_KERNEL_SOURCE := kernel/samsung/a12s
 TARGET_KERNEL_ARCH := arm64
@@ -69,12 +69,12 @@ TARGET_KERNEL_ARCH := arm64
 # Kernel - prebuilt
 #TARGET_FORCE_PREBUILT_KERNEL := true
 #ifeq ($(TARGET_FORCE_PREBUILT_KERNEL),true)
-#TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)/prebuilt/kernel
-#TARGET_PREBUILT_DTB := $(DEVICE_PATH)/prebuilt/dtb
-#BOARD_MKBOOTIMG_ARGS += --dtb $(TARGET_PREBUILT_DTB)
-#BOARD_INCLUDE_DTB_IN_BOOTIMG := true
-#BOARD_PREBUILT_DTBOIMAGE := $(DEVICE_PATH)/prebuilt/dtbo.img
-#BOARD_KERNEL_SEPARATED_DTBO := true
+TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)/prebuilt/kernel
+TARGET_PREBUILT_DTB := $(DEVICE_PATH)/prebuilt/dtb
+BOARD_MKBOOTIMG_ARGS += --dtb $(TARGET_PREBUILT_DTB)
+BOARD_INCLUDE_DTB_IN_BOOTIMG := true
+BOARD_PREBUILT_DTBOIMAGE := $(DEVICE_PATH)/prebuilt/dtbo.img
+BOARD_KERNEL_SEPARATED_DTBO := true
 #endif
 
 # Partitions
@@ -135,4 +135,4 @@ BOARD_SEPOLICY_TEE_FLAVOR := teegris
 
 # Inherit the proprietary files
 include vendor/samsung/a12s/BoardConfigVendor.mk
-#include kernel/samsung/a12s/AndroidKernel.mk
+include kernel/samsung/a12s/AndroidKernel.mk
